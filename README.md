@@ -18,10 +18,7 @@ Visit the live site: [https://yanyin-chen-1156325.github.io](https://yanyin-chen
 ## 📱 Features
 
 - Responsive design
-- Dark/Light mode toggle
-- Multi-language support (English/繁體中文)
 - Project showcase
-- Contact form
 
 ## 🔧 Development
 
