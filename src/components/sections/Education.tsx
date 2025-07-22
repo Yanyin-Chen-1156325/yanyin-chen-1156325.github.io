@@ -5,6 +5,7 @@ import SectionHeader from '../ui/SectionHeader';
 const Education: React.FC = () => {
   const courses = [
     { name: "Software Development", grade: "A" },
+    { name: "Studio Project", grade: "A" },
     { name: "Advanced Programming", grade: "A+" },
     { name: "Advanced Database Management", grade: "A+" }
   ];
@@ -42,13 +43,6 @@ const Education: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
-            
-            <div className="education-description">
-              <p>
-                Currently pursuing advanced studies in software development with focus on modern 
-                programming paradigms, software engineering principles, and cutting-edge technologies.
-              </p>
             </div>
           </div>
         </div>

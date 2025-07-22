@@ -20,7 +20,7 @@
 /* Animated Background Elements */
 .hero::before,
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
@@ -148,7 +148,7 @@
 }
 
 .overview::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -191,7 +191,7 @@
 }
 
 .overview-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -219,14 +219,27 @@
   animation: bounce 2s ease-in-out infinite;
 }
 
-.overview-card:nth-child(1) .card-icon { animation-delay: 0s; }
-.overview-card:nth-child(2) .card-icon { animation-delay: 0.2s; }
-.overview-card:nth-child(3) .card-icon { animation-delay: 0.4s; }
-.overview-card:nth-child(4) .card-icon { animation-delay: 0.6s; }
+.overview-card:nth-child(1) .card-icon {
+  animation-delay: 0s;
+}
+.overview-card:nth-child(2) .card-icon {
+  animation-delay: 0.2s;
+}
+.overview-card:nth-child(3) .card-icon {
+  animation-delay: 0.4s;
+}
+.overview-card:nth-child(4) .card-icon {
+  animation-delay: 0.6s;
+}
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .overview-card h3 {
@@ -329,7 +342,7 @@
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -551,7 +564,7 @@
 }
 
 .cert-card::before {
-  content: '🏆';
+  content: "🏆";
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -606,7 +619,7 @@
   display: block;
   color: var(--gray-light);
   font-size: 0.8rem;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   margin-bottom: 1rem;
   padding: 0.5rem;
   background: var(--light);
@@ -639,7 +652,7 @@
 }
 
 .skills-section-fullwidth::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -678,7 +691,7 @@
 }
 
 .skill-category h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -0.5rem;
   left: 50%;
@@ -709,7 +722,7 @@
 }
 
 .skill-tag::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: -100%;
@@ -764,7 +777,7 @@
 }
 
 .soft-skill-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   right: -50%;
@@ -901,10 +914,109 @@
 }
 
 .project-features li::before {
-  content: '✨';
+  content: "✨";
   position: absolute;
   left: 0;
   color: var(--primary);
+}
+
+/* Personal Contributions Styles */
+.project-contributions {
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 149, 0, 0.2);
+}
+
+.project-contributions h4 {
+  color: var(--secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.project-contributions h4::before {
+  content: "👨‍💻 ";
+  margin-right: 0.5rem;
+}
+
+.project-contributions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-contributions li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+
+.project-contributions li::before {
+  content: "🚀";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+}
+
+/* Personal Contributions */
+.project-contributions-full {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(255, 149, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 149, 0, 0.1);
+}
+
+.project-contributions-full h4 {
+  color: var(--secondary);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+}
+
+.project-contributions-full h4::before {
+  content: "👨‍💻 ";
+  margin-right: 0.5rem;
+}
+
+.project-contributions-full ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.project-contributions-full li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--gray-dark);
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem 1rem 1rem 2.5rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--secondary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-contributions-full li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.2);
+}
+
+.project-contributions-full li::before {
+  content: "🚀";
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: var(--secondary);
 }
 
 .project-tech {
@@ -952,7 +1064,7 @@
 }
 
 .project-links a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -990,24 +1102,24 @@
     text-align: center;
     padding: 3rem 2rem;
   }
-  
+
   .hero-content {
     order: 2;
   }
-  
+
   .hero-image {
     order: 1;
     margin-bottom: 2rem;
   }
-  
+
   .project-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .project-right .project-grid {
     direction: ltr;
   }
-  
+
   .project-info {
     padding: 2.5rem;
   }
@@ -1017,30 +1129,30 @@
   .hero-buttons {
     justify-content: center;
   }
-  
+
   .profile-image {
     width: 250px;
     height: 250px;
   }
-  
+
   .project-info {
     padding: 2.5rem 2rem;
   }
-  
+
   .skills-grid,
   .soft-skills-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .achievements-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .certifications-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .courses-grid {
     grid-template-columns: 1fr;
   }
@@ -1050,23 +1162,27 @@
   .overview-grid {
     gap: 1.5rem;
   }
-  
+
   .overview-card {
     padding: 2rem 1.5rem;
   }
-  
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
   .project {
     margin-bottom: 3rem;
   }
-  
+
   .project-info {
     padding: 2rem 1.5rem;
   }
-  
+
   .project h3 {
     font-size: 1.75rem;
   }
-  
+
   .work-content,
   .education-content {
     padding: 2rem 1.5rem;

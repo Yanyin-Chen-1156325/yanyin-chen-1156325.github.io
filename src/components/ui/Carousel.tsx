@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface CarouselProps {
   images: string[];
@@ -10,21 +10,17 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({
   images,
   alt,
-  className = '',
-  isReversed = false
+  className = "",
+  isReversed = false,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
-    setCurrentIndex((prev) => 
-      prev === images.length - 1 ? 0 : prev + 1
-    );
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
   const prevImage = () => {
-    setCurrentIndex((prev) => 
-      prev === 0 ? images.length - 1 : prev - 1
-    );
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   if (!images || images.length === 0) {
@@ -35,12 +31,12 @@ const Carousel: React.FC<CarouselProps> = ({
     <div className={`project-carousel ${className}`}>
       <button
         className="carousel-btn carousel-btn-prev"
-        onClick={prevImage}
+        onClick={isReversed ? nextImage : prevImage}
         aria-label="Previous image"
       >
-        {isReversed ? '❮' : '❮'}
+        {isReversed ? "❯" : "❮"}
       </button>
-      
+
       <div className="carousel-container">
         <img
           src={images[currentIndex]}
@@ -48,13 +44,13 @@ const Carousel: React.FC<CarouselProps> = ({
           className="carousel-image"
         />
       </div>
-      
+
       <button
         className="carousel-btn carousel-btn-next"
-        onClick={nextImage}
+        onClick={isReversed ? prevImage : nextImage}
         aria-label="Next image"
       >
-        {isReversed ? '❯' : '❯'}
+        {isReversed ? "❮" : "❯"}
       </button>
     </div>
   );

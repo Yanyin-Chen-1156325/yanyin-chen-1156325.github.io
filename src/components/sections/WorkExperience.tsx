@@ -6,19 +6,27 @@ const WorkExperience: React.FC = () => {
   const achievements = [
     {
       icon: "🔧",
-      text: "Performed daily system maintenance and troubleshooting for Manufacturing Execution Systems (MES) within a Computer-Integrated Manufacturing (CIM) environment"
+      text: "Managed daily system maintenance and troubleshooting for Manufacturing Execution Systems (MES) within a Computer-Integrated Manufacturing (CIM) environment, ensuring high system uptime and operational continuity."
     },
     {
-      icon: "💻",
-      text: "Conducted system analysis and software development to support manufacturing operations and collaborated with cross-functional teams to implement IT solutions"
+      icon: "🔍",
+      text: "Conducted in-depth system analysis and developed custom software solutions to enhance manufacturing operations, directly addressing critical production needs."
+    },
+    {
+      icon: "🤝",
+      text: "Collaborated effectively with cross-functional teams to gather and refine requirements, playing a key role in the design and successful implementation of complex IT solutions."
     },
     {
       icon: "⚡",
-      text: "Automated previously manual processes through custom software development, significantly reducing on-site labor and improving operational efficiency"
+      text: "Automated a critical manual process through custom software development, significantly reducing on-site labour and enhancing overall operational efficiency."
+    },
+    {
+      icon: "💻",
+      text: "Developed batch programs to streamline daily system maintenance tasks, improving system reliability and reducing manual effort."
     },
     {
       icon: "📚",
-      text: "Developed batch programs to streamline daily maintenance tasks and created detailed SOP documentation to ensure system continuity"
+      text: "Authored comprehensive Standard Operating Procedures (SOP) documentation, facilitating smooth system handover and ensuring long-term maintainability for future teams."
     }
   ];
 
@@ -31,7 +39,7 @@ const WorkExperience: React.FC = () => {
           title="Work Experience" 
           icon={<Briefcase size={32} />}
         />
-        
+
         <div className="work-card">
           <div className="work-header">
             <div className="work-period">

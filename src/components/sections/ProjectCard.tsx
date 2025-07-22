@@ -7,7 +7,8 @@ interface ProjectCardProps {
   badge: string;
   description: string;
   technologies: string[];
-  features?: string[]; // 新增特色功能
+  features?: string[];
+  personalContributions?: string[];
   githubUrl?: string;
   liveUrl?: string;
   images: string[];
@@ -20,6 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   technologies,
   features,
+  personalContributions,
   githubUrl,
   liveUrl,
   images,
@@ -80,6 +82,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           />
         </div>
       </div>
+
+      {personalContributions && personalContributions.length > 0 && (
+        <div className="project-contributions-full">
+          <h4>My Personal Contributions</h4>
+          <ul>
+            {personalContributions.map((contribution, index) => (
+              <li key={index}>{contribution}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

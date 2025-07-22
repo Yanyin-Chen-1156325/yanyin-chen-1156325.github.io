@@ -8,13 +8,24 @@ const Projects: React.FC = () => {
     {
       title: "Online Travel Journal",
       badge: "Featured Project - Group Assignment",
-      description: "RAR Online Travel Journal is a comprehensive web application that enables travelers to document detailed journeys and events. Additional key features include a premium subscription model, gamification system with badges, a departure board displaying community travel updates, edit logs for tracking administrative changes, and integrated helpdesk support. Through these innovative features, RAR creates a sustainable and vibrant travel community platform.",
+      description: "A comprehensive web application that enables travelers to document journeys and events. Features include premium subscriptions, gamification with badges, community departure board, edit logs, and helpdesk support to create a vibrant travel community platform.",
       features: [
         "Role-Based Access Control (RBAC) system managing different user permissions",
         "Multi-level user roles: Travellers, Administrators, Editors and Support Technicians",
-        "Secure access control for sensitive operations and data"
+        "Secure access control for sensitive operations and data",
+        "Automated testing with Playwright for comprehensive quality assurance"
       ],
-      technologies: ["Python", "Flask", "HTML", "CSS3", "JavaScript", "Bootstrap", "MySQL", "RBAC"],
+      personalContributions: [
+        "Journey Management System: Complete CRUD operations for travel journeys",
+        "Staff Journey Management: Administrative tools for hiding, moderating, and managing user-generated journeys",
+        "Premium Subscription Service: Integrated payment processing and subscription management system",
+        "Gamification System: Badge achievement system with progress tracking and user engagement features",
+        "Edit Log Functionality: Comprehensive audit trail system tracking all administrative changes",
+        "Notification System: Real-time alerts and updates for user activities and system events",
+        "Code Modularization: Developed reusable utility functions and shared modules for improved code maintainability",
+        "Quality Assurance: Extensive bug fixing and system optimization across the entire web application"
+      ],
+      technologies: ["Python", "Flask", "HTML", "CSS3", "JavaScript", "Bootstrap", "MySQL", "RBAC", "Playwright"],
       liveUrl: "https://comp639prj2rar.pythonanywhere.com/",
       images: [
         "/OnlineTravelJournal/image1.png",
@@ -33,7 +44,7 @@ const Projects: React.FC = () => {
         "Clean separation of concerns for optimal maintainability and scalability",
         "Structured design facilitating future enhancements and maintenance"
       ],
-      technologies: ["Python", "Flask", "HTML", "CSS3", "JavaScript", "Bootstrap", "MySQL", "SQLAlchemy", "Three-tier Architecture"],
+      technologies: ["Python", "Flask", "HTML", "CSS3", "JavaScript", "Bootstrap", "MySQL", "SQLAlchemy", "Three-tier Architecture", "pytest"],
       githubUrl: "https://github.com/Yanyin-Chen-1156325/veggie_store.git",
       liveUrl: "https://annchen1156325.pythonanywhere.com/",
       images: [
@@ -42,6 +53,27 @@ const Projects: React.FC = () => {
         "/VeggieStore/image3.png",
         "/VeggieStore/image4.png",
         "/VeggieStore/image5.png",
+      ]
+    },
+    {
+      title: "Speaking Test",
+      badge: "Featured Project - Solo Project",
+      description: "A cloud-based web application that evaluates users' spoken English proficiency using Azure Speech Service, aligned with CEFR levels. The app dynamically assigns prompts, records user audio, and returns real-time fluency feedback.",
+      features: [
+        "Dynamically generates practice texts by Azure Open AI",
+        "Speech-to-text and fluency analysis powered by Azure Speech Service",
+        "RESTful API integration between React frontend and C# Web API backend",
+        "CI/CD pipeline using GitHub Actions and deployment to Azure"
+      ],
+      technologies: [
+        "React", "TypeScript", "C#", ".NET Web API", "Azure Speech Service", "Azure Open AI",
+        "Azure Static Web Apps", "Azure App Service", "GitHub Actions"
+      ],
+      liveUrl: "https://blue-island-047145000.1.azurestaticapps.net/",
+      images: [
+        "/SpeakingTest/image1.png",
+        "/SpeakingTest/image2.png",
+        "/SpeakingTest/image3.png"
       ]
     }
   ];
@@ -60,6 +92,7 @@ const Projects: React.FC = () => {
                 badge={project.badge}
                 description={project.description}
                 features={project.features}
+                personalContributions={project.personalContributions}
                 technologies={project.technologies}
                 githubUrl={project.githubUrl}
                 liveUrl={project.liveUrl}
