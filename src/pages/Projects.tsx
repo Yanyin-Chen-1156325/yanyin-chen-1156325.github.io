@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
         "React", "TypeScript", "C#", ".NET Web API", "Azure Speech Service", "Azure Open AI",
         "Azure Static Web Apps", "Azure App Service", "GitHub Actions"
       ],
-      liveUrl: "https://blue-island-047145000.1.azurestaticapps.net/",
+      liveUrl: "https://speaking-test-bay.vercel.app/",
       images: [
         "/SpeakingTest/image1.png",
         "/SpeakingTest/image2.png",
