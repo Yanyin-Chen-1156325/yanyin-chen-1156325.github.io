@@ -6,6 +6,27 @@ const Projects: React.FC = () => {
   // Project data - could be moved to constants later
   const projectsData = [
     {
+      title: "Speaking Test",
+      badge: "Featured Project - Solo Project",
+      description: "A cloud-based web application that evaluates users' spoken English proficiency using Azure Speech Service, aligned with CEFR levels. The app dynamically assigns prompts, records user audio, and returns real-time fluency feedback.",
+      features: [
+        "Dynamically generates practice texts by Azure Open AI",
+        "Speech-to-text and fluency analysis powered by Azure Speech Service",
+        "RESTful API integration between React frontend and C# Web API backend",
+        "CI/CD pipeline using GitHub Actions and deployment to Azure"
+      ],
+      technologies: [
+        "React", "TypeScript", "C#", ".NET Web API", "Azure Speech Service", "Azure Open AI",
+        "Azure Static Web Apps", "Azure App Service", "GitHub Actions"
+      ],
+      liveUrl: "https://speaking-test-bay.vercel.app/",
+      images: [
+        "/SpeakingTest/image1.png",
+        "/SpeakingTest/image2.png",
+        "/SpeakingTest/image3.png"
+      ]
+    },
+    {
       title: "Online Travel Journal",
       badge: "Featured Project - Group Assignment",
       description: "A comprehensive web application that enables travelers to document journeys and events. Features include premium subscriptions, gamification with badges, community departure board, edit logs, and helpdesk support to create a vibrant travel community platform.",
@@ -53,27 +74,6 @@ const Projects: React.FC = () => {
         "/VeggieStore/image3.png",
         "/VeggieStore/image4.png",
         "/VeggieStore/image5.png",
-      ]
-    },
-    {
-      title: "Speaking Test",
-      badge: "Featured Project - Solo Project",
-      description: "A cloud-based web application that evaluates users' spoken English proficiency using Azure Speech Service, aligned with CEFR levels. The app dynamically assigns prompts, records user audio, and returns real-time fluency feedback.",
-      features: [
-        "Dynamically generates practice texts by Azure Open AI",
-        "Speech-to-text and fluency analysis powered by Azure Speech Service",
-        "RESTful API integration between React frontend and C# Web API backend",
-        "CI/CD pipeline using GitHub Actions and deployment to Azure"
-      ],
-      technologies: [
-        "React", "TypeScript", "C#", ".NET Web API", "Azure Speech Service", "Azure Open AI",
-        "Azure Static Web Apps", "Azure App Service", "GitHub Actions"
-      ],
-      liveUrl: "https://speaking-test-bay.vercel.app/",
-      images: [
-        "/SpeakingTest/image1.png",
-        "/SpeakingTest/image2.png",
-        "/SpeakingTest/image3.png"
       ]
     }
   ];
