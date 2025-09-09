@@ -5,7 +5,7 @@ import SectionHeader from '../ui/SectionHeader';
 const Education: React.FC = () => {
   const courses = [
     { name: "Software Development", grade: "A" },
-    { name: "Studio Project", grade: "A" },
+    { name: "Studio Project", grade: "A+" },
     { name: "Advanced Programming", grade: "A+" },
     { name: "Advanced Database Management", grade: "A+" }
   ];
