@@ -3,7 +3,6 @@ import SectionHeader from '../components/ui/SectionHeader';
 import ProjectCard from '../components/sections/ProjectCard';
 
 const Projects: React.FC = () => {
-  // Project data - could be moved to constants later
   const projectsData = [
     {
       title: "Speaking Test",
@@ -74,6 +73,28 @@ const Projects: React.FC = () => {
         "/VeggieStore/image3.png",
         "/VeggieStore/image4.png",
         "/VeggieStore/image5.png",
+      ]
+    },
+    {
+      title: "NZTripGenie",
+      badge: "Featured Project - (⚠️In Development)",
+      description: "An AI-powered travel planning platform that helps users create personalized itineraries for New Zealand destinations. The platform leverages advanced AI capabilities to suggest activities, accommodations, and routes based on user preferences and real-time data.",
+      features: [
+        "AI-powered itinerary generation using LangGraph framework",
+        "Personalized recommendations based on user preferences",
+        "Interactive travel planning interface with modern UI/UX",
+        "Real-time data integration for up-to-date travel information"
+      ],
+      technologies: [
+        "React", "Tailwind CSS", "Shadcn/ui", "Python", "Django", "PostgreSQL", "LangGraph", "Docker"
+      ],
+      liveUrl: "https://nztripgenie.vercel.app/",
+      images: [
+        "/NZTripGenie/image1.png",
+        "/NZTripGenie/image2.png",
+        "/NZTripGenie/image3.png",
+        "/NZTripGenie/image4.png",
+        "/NZTripGenie/image5.png"
       ]
     }
   ];
